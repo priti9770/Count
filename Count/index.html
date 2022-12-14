@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <textarea
+        id="my-text"
+        rows="8"
+        placeholder="Type something here..."
+      ></textarea>
+      <p id="count-result">Total characters: 0</p>
+    </div>
+
+    <!-- javascript code  -->
+    <script>
+      let myText = document.getElementById("my-text");
+      myText.addEventListener("input", () => {
+        let count = myText.value.length;
+        console.log(count);
+        let c_result = document.getElementById("count-result");
+        c_result.innerText = ` Total Characters is ${count}`;
+      });
+    </script>
+  </body>
+</html>
